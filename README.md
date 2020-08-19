@@ -4,7 +4,10 @@ stack answer
 Do this in order
 
 ```
-docker build ./pm2_docker
+git clone https://github.com/golkhandani/pm2_docker.git
 
-docker run -p 3000:3000 -t {image_id}
+docker build pm2_docker/ --tag pm2docker:test
+
+docker run -p 3000:3000 -t pm2docker:test
+
 ```
